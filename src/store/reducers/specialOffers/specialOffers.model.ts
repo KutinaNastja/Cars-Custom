@@ -1,3 +1,3 @@
-export interface NavigationState {
-    isOpen: boolean;
+export interface SpecialOffersState {
+  isOpen: boolean;
 }

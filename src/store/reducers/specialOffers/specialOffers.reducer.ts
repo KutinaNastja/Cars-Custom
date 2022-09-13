@@ -2,18 +2,18 @@ import { handleActions } from "redux-actions";
 import { getType } from "typesafe-actions";
 
 import { specialOffersActions } from "./specialOffers.actions";
-import { specialOffersState } from "./specialOffers.model";
+import { SpecialOffersState } from "./specialOffers.model";
 
-const initialState: specialOffersState = {
+const initialState: SpecialOffersState = {
   isOpen: false,
 };
 
-const open = (state: specialOffersState): specialOffersState => ({
+const open = (state: SpecialOffersState): SpecialOffersState => ({
   ...state,
   isOpen: true,
 });
 
-const close = (state: specialOffersState): specialOffersState => ({
+const close = (state: SpecialOffersState): SpecialOffersState => ({
   ...state,
   isOpen: false,
 });
@@ -23,4 +23,4 @@ const reducerMap: { [key: string]: any } = {
   [getType(specialOffersActions.close)]: close,
 };
 
-export const navigationReducer = handleActions(reducerMap, initialState);
+export const specialOffersReducer = handleActions(reducerMap, initialState);

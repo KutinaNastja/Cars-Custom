@@ -9,7 +9,7 @@ import { ThunkAction } from "./types";
 export type Store = ReduxStore<RootState>;
 
 export function makeStore() {
-    return createStore(rootReducer, middlewares);
+  return createStore(rootReducer, middlewares);
 }
 
 export const wrapper = createWrapper(makeStore, { debug: true });

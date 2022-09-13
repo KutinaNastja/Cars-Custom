@@ -1,3 +1,21 @@
-export const SpecialOffers = () => {
-  return "SpecialOffers";
-};
+.wrapper{
+  position: absolute;
+  top: 150px;
+  right: -20px;
+  width: 350px;
+  height: 500px;
+  margin: 40px;
+  background-color: antiquewhite;
+  z-index: 2;
+  @media (min-width: 600px ) {
+    width: 700px;
+  }
+}
+.buttonClosePopUp {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 10px ;
+  img {
+    cursor: pointer;
+  }
+}

@@ -1,7 +1,9 @@
-import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
+import { connect } from "react-redux";
 
-import styles from "../components/HomePage/HomePage.module.scss";
+import { HomePage } from "../components/HomePage/HomePage";
 
-export default HomePa;
+// export default function index() {
+//   return <HomePage />;
+// }
+
+export default connect((state) => state)(HomePage);

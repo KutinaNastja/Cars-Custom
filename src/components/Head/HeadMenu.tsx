@@ -1,9 +1,9 @@
-import styles from "./Head.module.scss";
+import styles from "./HeadMenu.module.scss";
 
 import burger from "../../assets/burger.svg";
 import carsLogo from "../../assets/cars-custom.jpg";
 
-export const Head = () => {
+export const HeadMenu = () => {
   const menuBurger = burger.src;
   const logo = carsLogo.src;
   return (

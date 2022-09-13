@@ -1,8 +1,12 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import type { AppProps } from "next/app";
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
-}
+import "../../styles/globals.css";
 
-export default MyApp
+import { wrapper } from "../store/store";
+
+const MyApp = ({ Component, pageProps }: AppProps) => {
+  // eslint-disable-next-line react/jsx-props-no-spreading
+  return <Component {...pageProps} />;
+};
+
+export default wrapper.withRedux(MyApp);

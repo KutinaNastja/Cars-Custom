@@ -1,0 +1,12 @@
+.wrapperCalculator{
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 20px;
+}
+.calculator{
+  width: 100%;
+  @media (min-width:1000px ) {
+    width: 75%;
+  }
+}
+
