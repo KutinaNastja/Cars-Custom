@@ -1,12 +1,73 @@
-.wrapperCalculator{
+.wrapperCalculator {
   display: flex;
   flex-direction: row-reverse;
   padding: 20px;
 }
-.calculator{
+
+.calculator {
   width: 100%;
-  @media (min-width:1000px ) {
-    width: 75%;
+}
+
+.carsWrapper {
+  overflow: hidden;
+  height: 120px;
+}
+
+.cars {
+  img {
+    width: 350px;
   }
 }
+
+.panelFilterMainPageContent {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.panelFilterMainItem {
+  border: 1px solid #f4af16;
+  border-radius: 12px;
+}
+
+.switcher {
+  width: 300px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  text-align: center;
+  align-items: center;
+}
+
+.buttonSwitcher {
+  display: flex;
+  width: 150px;
+  height: 50px;
+  padding: 6px 5px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  background-color: rgb(59, 56, 56);
+  &_active {
+    background-color: #f4af16;
+  }
+}
+
+
+@media (min-width: 1000px) {
+  .calculator {
+    width: 75%;
+  }
+  .carsWrapper {
+    height: 300px;
+  }
+  .cars {
+    img {
+      width: 800px;
+    }
+  }
+}
+
 
