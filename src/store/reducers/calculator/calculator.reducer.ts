@@ -6,7 +6,7 @@ import { AddToCartParams, CalculatorState } from "./calculator.model";
 
 const initialState: CalculatorState = {
   isNewCar: true,
-  isOpenDescription: false,
+  lists: {},
   cart: [
     {
       id: 1,
@@ -29,14 +29,14 @@ const setIsNewCar = (state: CalculatorState, action: Action<boolean>): Calculato
   isNewCar: action.payload,
 });
 
-const open = (state: CalculatorState): CalculatorState => ({
+const open = (state: CalculatorState, action: Action<{ i: number }>): CalculatorState => ({
   ...state,
-  isOpenDescription: true,
+  lists: { ...state.lists, [action.payload.i]: true },
 });
 
-const close = (state: CalculatorState): CalculatorState => ({
+const close = (state: CalculatorState, action: Action<{ i: number }>): CalculatorState => ({
   ...state,
-  isOpenDescription: false,
+  lists: { ...state.lists, [action.payload.i]: false },
 });
 
 const push = (state: CalculatorState, action: Action<AddToCartParams>): CalculatorState => ({

@@ -11,5 +11,5 @@ export type AddToCartParams = { service: Service };
 export interface CalculatorState {
   isNewCar: boolean;
   cart: Service[];
-  isOpenDescription: boolean;
+  lists: any;
 }

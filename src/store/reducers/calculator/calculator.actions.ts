@@ -6,6 +6,6 @@ export const calculatorActions = {
   setIsNewCar: createAction("@CALCULATOR.setIsNewCar.COMMIT")<boolean>(),
   push: createAction("@CALCULATOR.push.COMMIT")<AddToCartParams>(),
   remove: createAction("@CALCULATOR.remove.COMMIT")<AddToCartParams>(),
-  open: createAction("@CALCULATOR.open.COMMIT")(),
-  close: createAction("@CALCULATOR.close.COMMIT")(),
+  open: createAction("@CALCULATOR.open.COMMIT")<{ i: number }>(),
+  close: createAction("@CALCULATOR.close.COMMIT")<{ i: number }>(),
 };
