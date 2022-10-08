@@ -8,4 +8,5 @@ export const calculatorActions = {
   remove: createAction("@CALCULATOR.remove.COMMIT")<AddToCartParams>(),
   open: createAction("@CALCULATOR.open.COMMIT")<{ i: number }>(),
   close: createAction("@CALCULATOR.close.COMMIT")<{ i: number }>(),
+  countItemsCart: createAction("@CALCULATOR.countItemsCart.COMMIT")(),
 };

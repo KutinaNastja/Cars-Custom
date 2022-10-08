@@ -1,0 +1,13 @@
+.cars {
+  img {
+    width: 350px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .cars {
+    img {
+      width: 90%;
+    }
+  }
+}

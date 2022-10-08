@@ -1,8 +1,7 @@
 export type Service = {
   id: number;
   title: string;
-  priceNewCar: number;
-  priceOldCar: number;
+  price: number;
   text: string;
 };
 
@@ -12,4 +11,5 @@ export interface CalculatorState {
   isNewCar: boolean;
   cart: Service[];
   lists: any;
+  sum: number;
 }

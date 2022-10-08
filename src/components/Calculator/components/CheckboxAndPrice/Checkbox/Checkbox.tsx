@@ -6,16 +6,19 @@ import styles from "./Checkbox.module.scss";
 import buttonClose from "../../../../../assets/close.svg";
 import buttonToUnfold from "../../../../../assets/toUnfold.svg";
 import { calculatorActions } from "../../../../../store/reducers/calculator";
-import { getCartSelector, getLists } from "../../../../../store/reducers/calculator/calculator.selector";
+import { getCartSelector, getListsSelector } from "../../../../../store/reducers/calculator/calculator.selector";
 import { CheckboxProps } from "./Checkbox.model";
 
 export const Checkbox = ({ service, i }: CheckboxProps) => {
   const dispatch = useDispatch();
   const openDescription = (i: number) => () => dispatch(calculatorActions.open({ i }));
   const closeDescription = (i: number) => () => dispatch(calculatorActions.close({ i }));
-  const addAService = () => dispatch(calculatorActions.push({ service }));
+  const addAService = () => {
+    dispatch(calculatorActions.push({ service }));
+    dispatch(calculatorActions.countItemsCart());
+  };
   const removeService = () => dispatch(calculatorActions.remove({ service }));
-  const lists = useSelector(getLists);
+  const lists = useSelector(getListsSelector);
   const cart = useSelector(getCartSelector);
   const isAddedCart = cart.find((cartItem) => cartItem.id === service.id);
   const toUnfold = buttonToUnfold.src;

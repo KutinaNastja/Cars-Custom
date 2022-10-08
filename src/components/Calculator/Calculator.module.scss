@@ -13,16 +13,19 @@
   height: 120px;
 }
 
-.cars {
-  img {
-    width: 350px;
-  }
-}
+
 
 .panelFilterMainPageContent {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  padding: 20px 0;
+
+}
+.positionPanel{
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .panelFilterMainItem {
@@ -61,13 +64,13 @@
     width: 75%;
   }
   .carsWrapper {
-    height: 300px;
+    height: 11%;
   }
-  .cars {
-    img {
-      width: 800px;
-    }
-  }
+.positionPanel{
+  padding: 0 20px;
+  width: auto;
+  display: flex;
+}
 }
 
 

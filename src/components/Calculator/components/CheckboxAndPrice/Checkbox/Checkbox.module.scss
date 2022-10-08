@@ -1,11 +1,13 @@
 .checkbox{
   display: flex;
   flex-direction: column;
+  border-bottom: #f4af16 solid 1px;
 }
 .checkboxAndTitle{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 25px 0;
 }
 .buttonAndTitle{
   display: flex;
@@ -33,5 +35,6 @@
 .buttonAndText{
   display: flex;
   align-items: center;
+  padding: 10px 10px;
 
 }

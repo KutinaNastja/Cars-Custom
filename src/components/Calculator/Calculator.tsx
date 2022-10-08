@@ -3,17 +3,16 @@ import cn from "classnames";
 
 import styles from "./Calculator.module.scss";
 
-import cars_new from "../../assets/cars_new.jpg";
 import { calculatorActions } from "../../store/reducers/calculator";
 import { getIsNewCarSelector } from "../../store/reducers/calculator/calculator.selector";
 import { CheckboxAndPrice } from "./components/CheckboxAndPrice/CheckboxAndPrice";
+import { ImageCars } from "./components/ImageCars/ImageCars";
 
 export const Calculator = () => {
   const dispatch = useDispatch();
   const setNewCar = () => dispatch(calculatorActions.setIsNewCar(true));
   const setOldCar = () => dispatch(calculatorActions.setIsNewCar(false));
   const isNewCar = useSelector(getIsNewCarSelector);
-  const cars = cars_new.src;
   return (
     <div className={styles.wrapperCalculator}>
       <div className={styles.calculator}>
@@ -29,21 +28,25 @@ export const Calculator = () => {
         </div>
         <div className={styles.panelFilterMainPageContent}>
           <p>Выберите авто:</p>
-          <div className={styles.panelFilterMainItem}>
-            <div className={styles.switcher}>
-              <div onClick={setNewCar} className={cn(styles.buttonSwitcher, isNewCar && styles.buttonSwitcher_active)}>
-                Новый
-              </div>
-              <div onClick={setOldCar} className={cn(styles.buttonSwitcher, !isNewCar && styles.buttonSwitcher_active)}>
-                Подержанный
+          <div className={styles.positionPanel}>
+            <div className={styles.panelFilterMainItem}>
+              <div className={styles.switcher}>
+                <div
+                  onClick={setNewCar}
+                  className={cn(styles.buttonSwitcher, isNewCar && styles.buttonSwitcher_active)}>
+                  Новый
+                </div>
+                <div
+                  onClick={setOldCar}
+                  className={cn(styles.buttonSwitcher, !isNewCar && styles.buttonSwitcher_active)}>
+                  Подержанный
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div className={styles.carsWrapper}>
-          <div className={styles.cars}>
-            <img src={cars} alt={cars} />
-          </div>
+          <ImageCars />
         </div>
         <CheckboxAndPrice />
       </div>
